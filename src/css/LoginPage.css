@@ -1,0 +1,161 @@
+:root{
+    --decore_widt: 30vw;
+}
+.loginPage-background{
+    background-image: linear-gradient(90deg, rgba(27,255,255,0.4033262963388481) 0%, rgba(27,255,255,0.5994047277113971) 29%, rgba(152,255,255,1) 50%, rgba(255,255,255,1) 51%),
+                    url('./photo/background-login.jpeg');
+    background-size: cover;
+    filter: grayscale(15%);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.logoPanel{
+    width: 325px;
+    height: 80px;
+    background-color: white;
+    position: absolute;
+    top: 40px;
+    left: -15px;
+    border-radius: 15px;
+    padding-left: 30px;
+    padding-top: 5px;
+    z-index: 2;
+}
+.rejestationButtonPanel{
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    position: absolute;
+    top: 40px;
+    right: -15px;
+    border-radius: 15px;
+    padding-left: 30px;
+    padding-top: 5px;
+    z-index: 2;
+}
+.rejestationButtonPanel-button{
+    text-align: left;
+    font-size: 15px;
+    width: 350px;
+    height: 60px;
+    margin-left: 15px;
+    background: linear-gradient(145deg, rgba(71,244,255,1) 0%, rgba(26,128,134,1) 100%);
+    box-shadow: 11px 13px 32px -15px rgba(66, 68, 90, 1);
+}
+.sloganPanel{
+    width: 28%;
+    height: 150px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    padding-left: 15px;
+    z-index: 2;
+}
+.sloganPanel p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100 !important;
+    font-size: 150%;
+    margin: 10px;
+    color: rgb(243, 243, 243);
+}
+.sloganPanel p:nth-child(1){
+    font-size: 200%;
+}
+.logoPanel-body{
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    gap: 10px;
+}
+.logoPanel-Logo {
+    width: 75px;
+    height: 75px;
+}
+.logoPanel-Logo img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.logoPanel-name h1{
+    width: 190px;
+}
+.loginPage-panel, .rejestationPage-panel{
+    width: 400px;
+    height: auto;
+    padding-bottom: 25px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 11px 14px 42px -12px rgba(66, 68, 90, 1);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px 20px;
+    z-index: 2;
+}
+.loginPage-panel-header{
+    margin-bottom: 10px;
+}
+.loginPage-panel-form-input{
+    color: #000;
+    color: rgba(0, 0, 0, 0.1);
+    margin: 30px 15px 20px 15px;
+}
+.loginPage-panel-form-input input{
+    width: 300px;
+}
+.loginPage-panel-form-input label{
+    color: rgba(0, 0, 0, 0.2);
+}
+.loginPage-panel-form-button{
+    width: 300px;
+    padding: 10px 100px 10px 100px;
+    margin-left: 15px;
+    background: linear-gradient(145deg, rgba(71,244,255,1) 0%, rgba(26,128,134,1) 100%);
+    box-shadow: 11px 13px 32px -15px rgba(66, 68, 90, 1);
+}
+.loginPage-panel-errorMsg{
+    color: rgba(206, 0, 0, 0.4);
+}
+.decorCointainer-circle1{
+    position: absolute;
+    background-color: transparent;
+    border: 45px solid rgba(71,244,255,1);
+    filter: blur(1.5rem);
+    width: var(--decore_widt);
+    height: var(--decore_widt);
+    border-radius: 1000px;
+    top: 50%;
+    right: calc(var(--decore_widt) / -2); 
+    transform: translateY(-50%); 
+}
+.decorCointainer-circle2{
+    position: absolute;
+    background-color: transparent;
+    border: 1px solid rgb(126, 193, 201);
+    filter: blur(0.09rem);
+    width: calc(var(--decore_widt) * 1.20);
+    height: calc(var(--decore_widt) * 1.20);
+    border-radius: 1000px;
+    top: 50%; 
+    right: calc(calc(var(--decore_widt) * 1.20) / -2); 
+    transform: translateY(-50%); 
+}
+.decorCointainer-circle3{
+    position: absolute;
+    background-color: transparent;
+    border: 1px solid rgb(126, 193, 201);
+    filter: blur(0.09rem);
+    width: calc(var(--decore_widt) * 1.35);
+    height: calc(var(--decore_widt) * 1.35);
+    border-radius: 1000px;
+    top: 50%;
+    right: calc(calc(var(--decore_widt) * 1.35) / -2); 
+    transform: translateY(-50%); 
+}
