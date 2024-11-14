@@ -16,7 +16,7 @@
     position: relative;
 }
 .logoPanel{
-    width: 325px;
+    width: 365px;
     height: 80px;
     background-color: white;
     position: absolute;
@@ -41,7 +41,7 @@
 }
 .rejestationButtonPanel-button{
     text-align: left;
-    font-size: 15px;
+    font-size: 13px;
     width: 350px;
     height: 60px;
     margin-left: 15px;
@@ -49,26 +49,24 @@
     box-shadow: 11px 13px 32px -15px rgba(66, 68, 90, 1);
 }
 .sloganPanel{
-    width: 28%;
+    width: 30%;
     height: 150px;
     position: absolute;
-    bottom: 15px;
+    bottom: -7%;
     left: 15px;
     padding-left: 15px;
     z-index: 2;
 }
 .sloganPanel p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 100 !important;
-    font-size: 150%;
-    margin: 10px;
-    color: rgb(243, 243, 243);
+    text-shadow: 0 0 20px rgb(10, 14, 16), 0 0 20px rgba(10, 175, 230, 0);
+    font-size: 130%;
+    color: rgb(255, 255, 255);
 }
 .sloganPanel p:nth-child(1){
-    font-size: 200%;
+    font-size: 160%;
 }
 .logoPanel-body{
-    width: 300px;
+    width: 350px;
     display: flex;
     flex-direction: row;
     justify-content: baseline;
@@ -85,6 +83,7 @@
 }
 .logoPanel-name h1{
     width: 190px;
+    font-size: 30px;
 }
 .loginPage-panel, .rejestationPage-panel{
     width: 400px;

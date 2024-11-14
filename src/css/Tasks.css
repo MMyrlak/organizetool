@@ -1,0 +1,116 @@
+:root{
+    --3day: rgb(161, 0, 0);
+    --7day: rgb(255,204,0);
+    --moreThaneWeek: rgb(51,153,0);
+}
+.taskList{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+}
+.taskList-cointainer{
+    position: relative;
+    width: 90%;
+    height: 100%;
+}
+.taskGroup{
+    width: 100%;
+    height: 90%;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: -2;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.taskGroup-visible{
+    display: flex;
+    gap: 9px;
+    opacity: 1;
+    animation: slideIn 1s;
+    transition: opacity 1s dispaly 1s;
+}
+.taskGroup-hidden{
+    display: flex;
+    opacity: 0;
+    animation: slideOut 1s;
+}
+@keyframes slideOut {
+    100%{
+        opacity: 0;
+        right: 100vw;
+    }
+    0%{
+        opacity: 1;
+        right: 0;
+    }
+}
+@keyframes slideIn {
+    0%{
+        opacity: 0;
+        left: 100vw;
+    }
+    100%{
+        opacity: 1;
+        left: 0;
+    }
+}
+.taskCard{
+    opacity: 1;
+    width: 30%;
+    height: auto;
+    min-height: 60vh;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 12px;
+    flex-direction: column;
+    background-color: rgb(210, 210, 210);
+}
+.taskCard-deadline {
+    margin: 7px 0;
+    text-align: center;
+    font-weight: 600;
+}
+.taskCard-team{
+    margin-top: 10px;
+}
+.taskCard-team ul{
+    list-style-type: "- ";
+}
+.taskCard-team-icon{
+    margin-right: 5px;
+}
+.deadline-3day {
+    border: 2px solid var(--3day);
+    animation: puls3day-box 1s;
+    animation-iteration-count: 2;
+}
+ .deadline-7day {
+    border: 2px solid var(--7day);
+    animation: puls7day-box 1s;
+}
+ .deadline-moreThanWeek {
+    border: 2px solid var(--moreThaneWeek);
+}
+.button{
+    background-color: rgb(206, 206, 206);
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 32px -14px rgb(21, 21, 27);
+}
+.button span{
+    font-size: 30px;
+    color: rgb(61, 61, 61);
+}
+
+  

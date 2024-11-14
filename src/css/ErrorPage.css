@@ -1,0 +1,36 @@
+@font-face {
+    font-family: Kode;
+    src: url("/src/css/font/KodeFont.ttf");
+}
+#error-page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: top;
+    flex-direction: column;
+    padding-top: 10px;
+    color: rgb(61, 61, 61);
+}
+#error-page h1:nth-child(1){
+    font-family: Kode;
+    margin: -5px;
+    font-size: 90px;
+}
+#error-page h1{
+    margin: -10px;
+}
+#error-page p{
+    margin: 15px;
+    font-size: 20px;
+}
+#error-page img{
+    margin: -10px;
+    width: 30%;
+    height: 30%;
+}
+#error-page a{
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+}

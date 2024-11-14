@@ -1,17 +1,18 @@
-import { useRouteError, Link } from "react-router-dom";
-
+import {  Link } from "react-router-dom";
+import '../css/ErrorPage.css';
+import { Button } from 'primereact/button';
+import gif from '../css/photo/ErrorGif.gif';
 export default function ErrorPage() {
-  const error = useRouteError();
-  console.error(error);
 
   return (
     <div id="error-page">
-      <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
-      <p>
-        <i>{error.statusText || error.message}</i>
-      </p>
-      <Link to={`/`}>Wróc do storny głównej</Link>
+      <h1>404</h1>
+      <img src={gif} alt=""/>
+      <h1>Wygląda jakbyś się zgubił</h1>
+      <p>strona której szukasz jest niedostępna!</p>
+      <Button>
+        <Link to={`/task`}>Wróc do storny głównej</Link>
+      </Button>
     </div>
   );
 }

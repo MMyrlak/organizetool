@@ -12,6 +12,7 @@ import ErrorPage from './components/ErrorPage';
 import Menu from './components/subcomponents/Menu';
 import LoginPage from './components/LoginPage';
 import RejestrationPage from './components/RejestationPage';
+import TaskList from './components/subcomponents/TaskList';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,11 +20,11 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/menu",
-        element: <Menu />,
+        path: "/task",
+        element: <TaskList />,
       },
       {
-        path: "/menu2",
+        path: "/menu",
         element: <Menu />,
       }
     ],
