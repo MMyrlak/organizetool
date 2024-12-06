@@ -9,10 +9,14 @@ import {
 } from "react-router-dom";
 import Root from './components/Root';
 import ErrorPage from './components/ErrorPage';
-import Menu from './components/subcomponents/Menu';
+import History from './components/subcomponents/History';
 import LoginPage from './components/LoginPage';
 import RejestrationPage from './components/RejestationPage';
 import TaskList from './components/subcomponents/TaskList';
+import TaskAdd from './components/subcomponents/TaskAdd';
+// import UserAdd from './components/subcomponents/UserAdd';
+import UserAdd from './components/subcomponents/UserAdd-DataTable';
+import UserMe from './components/subcomponents/UserMe';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,8 +28,24 @@ const router = createBrowserRouter([
         element: <TaskList />,
       },
       {
-        path: "/menu",
-        element: <Menu />,
+        path: "/userAdd",
+        element: <UserAdd />,
+      },
+      {
+        path: "/",
+        element: <TaskList />,
+      },
+      {
+        path: "/history",
+        element: <History />,
+      },
+      {
+        path: "/taskAdd",
+        element: <TaskAdd />,
+      },
+      {
+        path: "/me",
+        element: <UserMe />,
       }
     ],
   },

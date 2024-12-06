@@ -1,0 +1,131 @@
+.userAdd-container{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 90%;
+}
+    .userAdd-container-left{
+        background-color: rgba(255, 255, 255, 0.37);
+        backdrop-filter: blur(1.2rem);
+        border: 2px solid rgb(211, 211, 211);
+        border-radius: 12px;
+        width: 38%;
+        height: 100%;
+        margin: 15px 1%;
+    }
+        .userAdd-container-left-header{
+            font-weight: 600;
+            font-size: 24px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .userAdd-container-left-button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            flex-flow: row nowrap;
+        }
+    .userAdd-container-right{
+        background-color: rgba(255, 255, 255, 0.37);
+        backdrop-filter: blur(1.2rem);
+        border: 2px solid rgb(211, 211, 211);
+        border-radius: 12px;
+        width: 60%;
+        height: 100%;
+        margin: 15px 1%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+        .itemTemplate{
+            margin: 2lvh 0;
+            width: 100%;
+            height: 9lvh;
+            border: 1px solid rgb(6, 182, 212);
+            border-radius: 10px;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 7px;
+            background-color: rgb(219, 219, 219);
+            backdrop-filter: blur(0.2rem);
+            backdrop-filter: opacity(0.1);
+        }
+            .itemTemplate-personalInfo{
+                display: flex;
+                flex-flow: column;
+            }
+            .itemTemplate-nameSurname{
+                display: flex;
+                flex-flow: row;
+                gap: 5px;
+                font-weight: 500;
+                color: rgb(35, 35, 35);
+                font-size: 18px;
+            }
+            .itemTemplate-email{
+                font-weight: 400;
+                font-size: 15px;
+                color: rgb(50, 50, 50);
+            }
+            .itemTemplate-createdAt{
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                gap: 5px;
+            }
+            .itemTemplate-createdAt button{
+                transform: scale(0.8);
+            }
+        .userAdd-container-right-dataView{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+        }
+        .p-datatable {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .p-datatable > .p-datatable-wrapper {
+            border-radius: 12px;
+        }
+
+        .p-paginator {
+            background:none;
+            border: 0 none; 
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+        }
+        .p-paginator *{
+            color: rgb(6, 182, 212);
+        }
+.userAdd-container-left{
+    padding: 3%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px
+}
+.userAdd-container-left-invalid{
+    border: 2px solid rgb(225, 15, 15);
+    border-radius: 7px;
+}
+.p-inputgroup{
+    box-shadow: 16px 15px 25px -18px rgba(66, 68, 90, 1);
+}
+.dialog-body > div{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 12px;
+    margin: 15px 0;
+    color: rgb(31, 31, 31);
+    font-size: large;
+    font-weight: 500;
+}
+.dialog-body > div  i{
+    margin-right: -5px;
+}

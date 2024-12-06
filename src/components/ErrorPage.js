@@ -9,7 +9,7 @@ export default function ErrorPage() {
       <h1>404</h1>
       <img src={gif} alt=""/>
       <h1>Wygląda jakbyś się zgubił</h1>
-      <p>strona której szukasz jest niedostępna!</p>
+      <p>Strona której szukasz jest niedostępna!</p>
       <Button>
         <Link to={`/task`}>Wróc do storny głównej</Link>
       </Button>

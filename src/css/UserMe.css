@@ -1,0 +1,55 @@
+.UserMe-body{
+    margin: 15px auto;
+    width: 100%;
+    height: 90%;
+}
+.UserMe-body-form{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+    flex-flow: column;
+}
+.UserMe-body-name_surname{
+    display: flex;
+    flex-flow: row;
+    gap: 15px;
+    width: 100%;
+}
+.UserMe-body-input{
+    display: flex;
+    flex-flow: column;
+    gap: 2px;
+    width: 100%;
+}
+.UserMe-body-input label{
+    font-size: 15px;
+    font-weight: 500;
+}
+.UserMe-body-detail {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+.UserMe-body-detail h2{
+    font-weight: 450;
+}
+
+.UserMe-body-button-toEdit{
+    margin: auto;
+    display: flex;
+    width: 60%;
+}
+.UserMe-body-button-toEdit button {
+    width: 100%;
+}
+
+.UserMe-body-button{
+    margin: auto;
+    display: flex;
+    gap: 15px;
+    width: 60%;
+}
+.UserMe-body-button button {
+    width: 100%;
+}

@@ -1,0 +1,120 @@
+
+.taskCard{
+    pointer-events: all;
+    flex: 1 1 0px;
+    opacity: 1;
+    height: 100%;
+    min-height: 60vh;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    background-color: rgb(210, 210, 210);
+    list-style-type: none;
+}
+.taskCard-deadline {
+    margin: 7px 0;
+    text-align: center;
+    font-weight: 600;
+}
+.taskCard-description{
+    height: 15%;
+}
+.taskCard-team{
+    margin-top: 10px;
+    height: 40%;
+}
+    .taskCard-team .taskCard-team-body{
+        height: 60%;
+        overflow: auto;
+        list-style: none;
+    }
+        .taskCard .taskCard-team-body::-webkit-scrollbar {
+        width: 4px;
+        }
+        .taskCard .taskCard-team-body::-webkit-scrollbar-track {
+            background: rgb(255, 255, 255);
+            border-radius: 8px;
+        }
+        .taskCard .taskCard-team-body::-webkit-scrollbar-thumb {
+            background:  rgb(6, 182, 212);
+            border-radius: 8px;
+        }
+        .taskCard-member{
+            margin-left: 3%;
+            width: 90%;
+            height: 7lvh;
+            display: flex;
+            align-items: center;
+            background-color: rgb(224, 224, 224);
+            border-radius: 12px;
+            padding-left: 2%;
+            margin-bottom: 2%;
+            cursor: pointer;
+        }
+            .complete{
+                border: 2px solid rgb(133, 204, 97);
+            }
+            .noComplete{
+                border: 2px solid rgb(106, 53, 43);
+            }
+.taskCard-team-icon{
+    margin-right: 5px;
+}
+.deadline-0day{
+    border: 2px solid rgb(66, 0, 0);
+    box-shadow: 0px 00px 37px -5px rgba(66, 0, 0, 1);
+}
+.deadline-3day {
+    border: 2px solid rgb(161, 0, 0);
+}
+ .deadline-7day {
+    border: 2px solid rgb(255,204,0);
+}
+.deadline-moreThanWeek {
+    border: 2px solid rgb(51,153,0);;
+}
+.taskCard-button{
+    position: relative;
+    pointer-events: auto;
+    margin: auto auto 0 auto;
+    width: 100%;
+    height: 10%;
+    box-sizing: border-box;
+    display: flex;
+    gap: 5px;
+
+}
+.taskCard-button .p-button{
+    z-index: 5;
+    pointer-events: auto;
+    background: rgb(6, 182, 212);
+    border: 1px solid rgb(5, 134, 156);
+    transition: background 0.5s;
+}
+.taskCard-button .p-button:hover{
+    background: rgb(3, 144, 169);
+}
+.button{
+    background-color: rgb(206, 206, 206);
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dialog-body > div{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 12px;
+    margin: 15px 0;
+    color: rgb(31, 31, 31);
+    font-size: large;
+    font-weight: 500;
+}
+.dialog-body > div  i{
+    margin-right: -5px;
+}

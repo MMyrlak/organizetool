@@ -3,7 +3,6 @@
 }
 #detail{
     width: 100%;
-    z-index: -1;
     height: 100vh;
     background-color: rgb(242, 242, 242);
     background-image: url('./photo/background-root.jpg');
@@ -22,27 +21,45 @@
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 5.5px );
     border-radius: 10px;
-    padding: 30px;
-    padding-top: 0px;
+    padding: 0 30px 20px 30px;
     overflow: hidden;
 }
-.detail-body-header{
+.detail-body-info{
+  margin-top: 3px;
+  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; 
+}
+  .detail-body-header{
     padding-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-}  
-  .detail-body-decor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  }  
+  .detail-body-me{
+    position: absolute;
+    right: 10px;
+  }
+    .detail-body-me a {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      font-weight: 500;
+      font-size: larger;
+    }
+
+.detail-body-decor {
     position: absolute;
     left: 50%;
     height: 1px;
     width: 0;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     transform: translateX(-50%);
     transition: width 1s ease-out;
   }
-  .detail-body-decor.expanded {
+.detail-body-decor.expanded {
     width: 90%;
   }
 
