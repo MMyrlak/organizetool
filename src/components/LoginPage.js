@@ -15,12 +15,9 @@ export default function LoginPage() {
     const navigate = useNavigate();
     function login(){
         setLoading(true);
-        console.log("Przed SHA256: " + password);
         let shaPassword = "";
         if(password) { shaPassword = sha256(password);}
-        console.log("Po SHA256: " + shaPassword);
         if(username && shaPassword){
-            alert("Login: " + username +"\nhasło:" + shaPassword +"\nPrzejście do menu za 3s");
             setTimeout(() => {
                 setLoading(false)
               }, "2500");
