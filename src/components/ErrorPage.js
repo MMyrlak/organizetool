@@ -11,7 +11,7 @@ export default function ErrorPage() {
       <h1>Wygląda jakbyś się zgubił</h1>
       <p>Strona której szukasz jest niedostępna!</p>
       <Button>
-        <Link to={`/task`}>Wróc do storny głównej</Link>
+        <Link to={`/task`}>Wróc do strony głównej</Link>
       </Button>
     </div>
   );

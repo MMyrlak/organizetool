@@ -1,0 +1,29 @@
+@font-face {
+    font-family: Kode;
+    src: url("/src/css/font/KodeFont.ttf");
+}
+body{
+    
+    background-color: #FBF6EF;
+}
+#EmailVerification-page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: top;
+    flex-direction: column;
+    padding-top: 10px;
+    color: rgb(61, 61, 61);
+}
+#EmailVerification-page h1{
+    font-family: Kode;
+    margin: 5px;
+    font-size: 60px;
+}
+#EmailVerification-page img{
+    margin: -10px;
+    width: 30%;
+    height: 30%;
+}

@@ -1,36 +1,48 @@
 import { Link,useNavigate } from "react-router-dom";
 import '../css/LoginPage.css'
-import { sha256 } from "js-sha256";
 import { useState } from "react";
 import { InputText } from 'primereact/inputtext';
 import { FloatLabel } from 'primereact/floatlabel';
 import { Button } from 'primereact/button'
 import { Password } from 'primereact/password';
 import logo from '../css/photo/logo512.png';
+import {loginUser, getSignedInUser} from '../backend/UserAction';
 export default function LoginPage() {
+
+    const navigate = useNavigate();
+    getSignedInUser().then(([isSignedIn]) => {
+          if(isSignedIn) {
+            navigate('/');
+          }
+      }).catch(error => {
+          console.error("Error fetching user:", error);
+      });
+
     const [password, setPassword] = useState("");
     const [username, setUsername] = useState("");
     const [loading, setLoading] = useState(false);
     const [errorMsg, setErrorMsg] = useState("");
-    const navigate = useNavigate();
-    function login(){
+    async function login() {
         setLoading(true);
-        let shaPassword = "";
-        if(password) { shaPassword = sha256(password);}
-        if(username && shaPassword){
-            setTimeout(() => {
-                setLoading(false)
-              }, "2500");
-            setTimeout(() => {
-                return navigate('/')
-              }, "3000");
+        if (username && password) {
+            try {
+                const isLoggedIn = await loginUser(username, password); // czekanie na wynik logowania
+                if (isLoggedIn) {
+                    navigate('/task'); 
+                } else {
+                    setErrorMsg("Błędny e-mail lub hasło");
+                    setPassword("");
+                }
+            } catch (error) {
+                setErrorMsg("Wystąpił błąd podczas logowania.");
+                console.error(error);
+            } finally {
+                setLoading(false);
+            }
         } else {
+            setLoading(false);
             setErrorMsg("Błędny e-mail lub hasło");
             setPassword("");
-            console.log("SSS");
-            setTimeout(() => {
-                setLoading(false)
-              }, "2500");
         }
     }
     return ( 

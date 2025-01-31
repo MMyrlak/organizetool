@@ -17,6 +17,7 @@ import TaskAdd from './components/subcomponents/TaskAdd';
 // import UserAdd from './components/subcomponents/UserAdd';
 import UserAdd from './components/subcomponents/UserAdd-DataTable';
 import UserMe from './components/subcomponents/UserMe';
+import EmailVerification from './components/EmailVerification';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -57,6 +58,11 @@ const router = createBrowserRouter([
   {
     path: "/rejestration",
     element: <RejestrationPage/>,
+    errorElement: <ErrorPage/>,
+  },
+  {
+    path: "/emailverification",
+    element: <EmailVerification/>,
     errorElement: <ErrorPage/>,
   }
 ]);

@@ -5,7 +5,7 @@
     opacity: 1;
     height: 100%;
     min-height: 60vh;
-    padding: 10px;
+    padding: 0%;
     border: 2px solid white;
     border-radius: 12px;
     display: flex;
@@ -14,17 +14,26 @@
     background-color: rgb(210, 210, 210);
     list-style-type: none;
 }
+.taskCard-name{
+    width: 100%;
+    text-align: center;
+    margin: 2% 0px;
+    padding: 0px 10px;
+}
 .taskCard-deadline {
     margin: 7px 0;
     text-align: center;
     font-weight: 600;
+    padding: 0px 10px;
 }
 .taskCard-description{
     height: 15%;
+    padding: 0px 10px;
 }
 .taskCard-team{
     margin-top: 10px;
     height: 40%;
+    padding: 0px 10px;
 }
     .taskCard-team .taskCard-team-body{
         height: 60%;
@@ -62,30 +71,67 @@
             }
 .taskCard-team-icon{
     margin-right: 5px;
+    padding-left: 10px;
 }
 .deadline-0day{
     border: 2px solid rgb(66, 0, 0);
     box-shadow: 0px 00px 37px -5px rgba(66, 0, 0, 1);
 }
-.deadline-3day {
-    border: 2px solid rgb(161, 0, 0);
+.daysRemaining-0day{
+    background-color: rgba(66, 0, 0, 0.8);
+    color: white;
 }
- .deadline-7day {
+.deadline-1day {
+    border: 2px solid rgb(161, 0, 0);
+    box-shadow: 0px 0px 10px -2px rgb(161, 0, 0);
+}
+.daysRemaining-1day{
+    background-color: rgba(161, 0, 0, 0.8);
+    color: white;
+}
+.deadline-3day {
+    border: 2px solid rgb(255, 102, 0);
+}
+.daysRemaining-3day{
+    background-color: rgba(255, 102, 0, 0.8);
+    color: white;
+}
+.deadline-7day {
     border: 2px solid rgb(255,204,0);
+}
+.daysRemaining-7day{
+    background-color: rgba(255,204,0, 0.8);
+    color: rgb(120, 120, 120);
 }
 .deadline-moreThanWeek {
     border: 2px solid rgb(51,153,0);;
 }
+.daysRemaining-moreThanWeek{
+    background-color: rgba(51,153,0, 0.8);
+    color: rgb(255, 255, 255);
+}
+.taskCard-daysRemaining{
+    width: 100%;
+    text-align: center;
+    margin: 0% 0% 2% 0%;
+    padding-top: 3%;
+    padding-bottom: 1%; 
+    font-weight: 500;
+    border-radius: 7px 7px 0px 0px;
+}
+
 .taskCard-button{
     position: relative;
     pointer-events: auto;
-    margin: auto auto 0 auto;
+    margin: auto auto 10px auto;
     width: 100%;
     height: 10%;
     box-sizing: border-box;
     display: flex;
     gap: 5px;
-
+    display: flex;
+    justify-content: center;
+    padding: 0px 10px;
 }
 .taskCard-button .p-button{
     z-index: 5;
@@ -96,6 +142,10 @@
 }
 .taskCard-button .p-button:hover{
     background: rgb(3, 144, 169);
+}
+
+.button-taskCard{
+    width: 50%;
 }
 .button{
     background-color: rgb(206, 206, 206);

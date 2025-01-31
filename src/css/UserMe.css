@@ -48,8 +48,53 @@
     margin: auto;
     display: flex;
     gap: 15px;
-    width: 60%;
 }
 .UserMe-body-button button {
+    width: 10rem;
+}
+.p-inputtext {
+    margin: 0;
     width: 100%;
+}
+.Progress-cointainer {
+    margin: 5% auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 50%;
+    height: 70%;
+    background-color: #F2F6F6;
+    border-radius: 24px;
+    position: relative;
+}
+.Progress-cointainer img{
+    width: 50%;
+}
+.Progress-cointainer h1 {
+    font-size: 2.5rem;
+    color: #333;
+    animation: typingEffect 2.5s steps(20) 1s 1 normal both, colorChange 1s infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+}
+@keyframes typingEffect {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #333;
+    }
+    50% {
+        color: #00bcd4;  /* Zmienny kolor */
+    }
+    100% {
+        color: #333;
+    }
 }

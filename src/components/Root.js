@@ -10,25 +10,34 @@ import 'primeicons/primeicons.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClipboard, faPenToSquare } from '@fortawesome/free-regular-svg-icons'
 import { Button } from 'primereact/button';
+import {logoutUser, getSignedInUser} from '../backend/UserAction';
+import Loading  from './subcomponents/Loading';
+
 export default function Root() {
+
+
   const location  = useLocation();
   const [isExpanded, setIsExpanded] = useState(false); 
+  const [userRoot, setUserRoot] = useState(null);
+  const [loader, setLoader] = useState(true);
   const navigate = useNavigate();
- 
-  
-  const userRoot = [
-    {
-      // role: "user",
-      role: "admin",
-      userId: "user7890", 
-      userName: "Emilia", 
-      company: "OrganizationTOOL-Company", 
-      userSurname: "Kozłowska", 
-      email: "emilia.kozlowska@example.com", 
-      createdAt: "2023-11-02", 
-      phoneNumber: "234567890" 
-    }
-  ];
+  useEffect(() => {
+    const fetchUserData = async () => {
+        try {
+            const [isSignedIn, userData, uid] = await getSignedInUser();
+            if (!isSignedIn) {
+                navigate('/login');
+                return;
+            }
+            setUserRoot(prevState => ({ ...prevState, ...userData, uid }));
+            setLoader(false);
+          } catch (error) {
+            console.error("Error fetching user:", error);
+        }
+    };
+
+    fetchUserData();
+}, []);
   const menuItems = [
     {
       label: 'Zadania',
@@ -41,7 +50,7 @@ export default function Root() {
       icon: () => <FontAwesomeIcon icon={faPenToSquare} style={{color: 'rgb(6,182,212)', fontSize: '38'}} />,
       command: () => { navigate('/taskAdd') },
       tooltip: 'Nowe Zadanie',
-      visible: userRoot[0].role === "admin" ? true : false,
+      visible: userRoot && (userRoot.role === "Admin" || userRoot.role === "Project Menager")  ? true : false,
     },
     {
       label: 'Historia',
@@ -53,7 +62,7 @@ export default function Root() {
       label: 'Dodaj użytkownia',
       icon: () => <img alt="Dodaj użytkownia" src={AddUser} style={{objectFit: 'cointain', width: '80%', height: '80%'}}/>,
       command: () => { navigate('/userAdd') },
-      visible: userRoot[0].role === "admin" ? true : false,
+      visible: userRoot && userRoot.role === "Admin" ? true : false,
       tooltip: 'Dodaj użytkownia',
     },
     {
@@ -64,8 +73,11 @@ export default function Root() {
     },
   ];
   function logout(){
-    alert("Wylogowano");
-    navigate('/login');
+    if(logoutUser()) {
+      navigate('/login');
+    } else {
+      alert("error");
+    }
   }
   useEffect(() => {
     setIsExpanded(false);
@@ -73,6 +85,11 @@ export default function Root() {
     return () => clearTimeout(timer);
   }, [location]); 
 
+  if(loader){
+    return (
+      <Loading> </Loading>
+    )
+  }
   return (
     <>
     <div id="rootCointainer">
@@ -86,12 +103,12 @@ export default function Root() {
             <div className="detail-body-header"> <Clock /> </div>
             <div className="detail-body-me"> 
               <Button severity="secondary" text raised size="small" >
-                <Link to="/me"> {userRoot[0].userName} {userRoot[0].userSurname} </Link>
+                <Link to="/me" > {userRoot.userName} {userRoot.userSurname} </Link>
               </Button>
             </div>
           </div>
           <div className={`detail-body-decor ${isExpanded ? 'expanded' : ''}`}></div>
-          <Outlet context={[userRoot[0]]} />
+          <Outlet context={[userRoot]} />
         </div>
       </div>
     </div>
