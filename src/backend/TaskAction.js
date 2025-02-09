@@ -56,7 +56,7 @@ export const deleteTaskAction = async (id, company) => {
         await deleteDoc(taskRef);
         window.location.reload();
     } catch (error) {
-        console.error("Error deleting task and subcollection: ", error);
+        console.error("Błąd przy usuwaniu dokumentu: ", error);
     }
 }
 

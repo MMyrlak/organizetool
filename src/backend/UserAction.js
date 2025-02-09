@@ -144,6 +144,8 @@ export const editMyUser = async (name, surname, phone, id) => {
             name: name,
             surname: surname,
             phoneNumber: phone,
+            userSurname: surname,
+            userName: name
         }).then(()=>{
             window.location.reload();
         });

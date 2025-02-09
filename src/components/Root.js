@@ -90,6 +90,7 @@ export default function Root() {
       <Loading> </Loading>
     )
   }
+  console.dir(userRoot);
   return (
     <>
     <div id="rootCointainer">

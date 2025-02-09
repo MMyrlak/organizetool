@@ -12,6 +12,7 @@ export default function UserMe() {
 
     const [userRoot] = useOutletContext();
     const [user] = useState(userRoot);
+    console.dir(user);
     const [loader, setLoader] = useState(true);
     const [isCompany, setIsCompany] = useState(false);
     useEffect(() => {
@@ -88,9 +89,7 @@ export default function UserMe() {
             <div className='Progress-cointainer'>
                 <img src={gif} alt=""/>
                 <h1>Ładowanie</h1>
-                
             </div>
-            <Button label="Ładowanie check" iconPos="right" onClick={() => setProgress(!progress)} style={{marginTop: "-40px"}}> </Button>
             </>
         )
       }
@@ -204,8 +203,7 @@ export default function UserMe() {
                     } 
                 </div>
             }
-            </div>    
-        <Button label="Ładowanie check" iconPos="right" onClick={() => setProgress(!progress)}> </Button>
+            </div>
         </div>
         
     );
