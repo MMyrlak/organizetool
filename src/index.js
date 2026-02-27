@@ -13,10 +13,14 @@ import History from './components/subcomponents/History';
 import LoginPage from './components/LoginPage';
 import RejestrationPage from './components/RejestationPage';
 import TaskList from './components/subcomponents/TaskList';
+import TaskListDemo from './components/subcomponents/TaskListDemo';
 import TaskAdd from './components/subcomponents/TaskAdd';
+import TaskAddDemo from './components/subcomponents/TaskAddDemo';
 // import UserAdd from './components/subcomponents/UserAdd';
 import UserAdd from './components/subcomponents/UserAdd-DataTable';
+import UserAddDemo from './components/subcomponents/UserAdd-DataTableDemo';
 import UserMe from './components/subcomponents/UserMe';
+import UserMeDemo from './components/subcomponents/UserMeDemo';
 import EmailVerification from './components/EmailVerification';
 const router = createBrowserRouter([
   {
@@ -26,15 +30,15 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/task",
-        element: <TaskList />,
+        element: <TaskListDemo />,
       },
       {
         path: "/userAdd",
-        element: <UserAdd />,
+        element: <UserAddDemo />,
       },
       {
         path: "/",
-        element: <TaskList />,
+        element: <TaskListDemo />,
       },
       {
         path: "/history",
@@ -42,11 +46,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/taskAdd",
-        element: <TaskAdd />,
+        element: <TaskAddDemo />,
       },
       {
         path: "/me",
-        element: <UserMe />,
+        element: <UserMeDemo />,
       }
     ],
   },

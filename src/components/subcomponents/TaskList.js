@@ -35,6 +35,7 @@ useEffect(() => {
       try {
           const data = await fetchTasksWithTeam(user.company, !isAdmin ? user.uid : null, false);
           setTasks(data);
+          console.log(sampleTasks)
       } catch (error) {
           console.error("Błąd podczas ładowania danych:", error);
       } finally {

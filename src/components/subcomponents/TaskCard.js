@@ -14,14 +14,13 @@ export default function TaskCard({task, isAdmin, company}){
       ? task.deadline.toDate 
           ? task.deadline.toDate() 
           : new Date(task.deadline)
-      : null; // Konwersja Timestamp na Date
+      : null;
     const deadlineDate = dueDate ? dueDate.toLocaleDateString() : null;
     const timeDiff = dueDate - now;
     const daysRemaining = Math.ceil(timeDiff / (1000 * 3600 * 24));
     let deadlineClass = '';
     let daysRemainingText = '';
     let daysRemainingClass = '';
-    console.log(task.name, daysRemaining);
     if (daysRemaining < 0) {
       deadlineClass = 'deadline-0day';
       daysRemainingClass = 'daysRemaining-0day';

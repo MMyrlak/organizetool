@@ -26,7 +26,8 @@ export default function LoginPage() {
         setLoading(true);
         if (username && password) {
             try {
-                const isLoggedIn = await loginUser(username, password); // czekanie na wynik logowania
+                const isLoggedIn = false;
+                // const isLoggedIn = await loginUser(username, password); // czekanie na wynik logowania
                 if (isLoggedIn) {
                     navigate('/task'); 
                 } else {
@@ -44,6 +45,9 @@ export default function LoginPage() {
             setErrorMsg("Błędny e-mail lub hasło");
             setPassword("");
         }
+    }
+    function loginDemo(){
+        navigate('/task');
     }
     return ( 
         <div className="loginPage-background">
@@ -84,6 +88,8 @@ export default function LoginPage() {
                         <label htmlFor="password">Hasło</label>
                     </FloatLabel>
                     <Button className="loginPage-panel-form-button" label="Zaloguj" icon="pi pi-check" loading={loading} onClick={login}/>
+                    <Button className="loginPage-panel-form-button" label="Zaloguj (DEMO)" icon="pi pi-check" loading={loading} onClick={loginDemo}/>
+                    
                 </div>
             </div>
         </div>

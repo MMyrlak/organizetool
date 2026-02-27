@@ -18,26 +18,40 @@ export default function Root() {
 
   const location  = useLocation();
   const [isExpanded, setIsExpanded] = useState(false); 
-  const [userRoot, setUserRoot] = useState(null);
-  const [loader, setLoader] = useState(true);
+  const [userRoot, setUserRoot] = useState({
+    company: "OrganizationTOOL-Company",
+    createdAt: { seconds: 1736521400, nanoseconds: 125000000 },
+    email: "admin@a.pl",
+    isCompany: false,
+    name: "Jan",
+    phoneNumber: "500111222",
+    role: "Admin",
+    surname: "Kowalski",
+    toRemove: false,
+    uid: "o5kKpABdawdXQW6rOInLTnV0GQs2",
+    userName: "Jan",
+    userSurname: "Kowalski"
+  });
+  const [loader, setLoader] = useState(false);
   const navigate = useNavigate();
-  useEffect(() => {
-    const fetchUserData = async () => {
-        try {
-            const [isSignedIn, userData, uid] = await getSignedInUser();
-            if (!isSignedIn) {
-                navigate('/login');
-                return;
-            }
-            setUserRoot(prevState => ({ ...prevState, ...userData, uid }));
-            setLoader(false);
-          } catch (error) {
-            console.error("Error fetching user:", error);
-        }
-    };
+//   useEffect(() => {
+//     const fetchUserData = async () => {
+//         try {
+//             const [isSignedIn, userData, uid] = await getSignedInUser();
+//             if (!isSignedIn) {
+//                 navigate('/login');
+//                 return;
+//             }
+//             setUserRoot(prevState => ({ ...prevState, ...userData, uid }));
+//             console.log(userRoot)
+//             setLoader(false);
+//           } catch (error) {
+//             console.error("Error fetching user:", error);
+//         }
+//     };
 
-    fetchUserData();
-}, []);
+//     fetchUserData();
+// }, []);
   const menuItems = [
     {
       label: 'Zadania',
@@ -90,7 +104,6 @@ export default function Root() {
       <Loading> </Loading>
     )
   }
-  console.dir(userRoot);
   return (
     <>
     <div id="rootCointainer">
