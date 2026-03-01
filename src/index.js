@@ -4,7 +4,7 @@ import './index.css';
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 import 'primeicons/primeicons.css';
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 import Root from './components/Root';
@@ -22,7 +22,7 @@ import UserAddDemo from './components/subcomponents/UserAdd-DataTableDemo';
 import UserMe from './components/subcomponents/UserMe';
 import UserMeDemo from './components/subcomponents/UserMeDemo';
 import EmailVerification from './components/EmailVerification';
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Root />,
